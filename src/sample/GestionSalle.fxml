@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="body" prefHeight="912.0" prefWidth="1368.0"
+            stylesheets="@GestSalle.css" xmlns="http://javafx.com/javafx/10.0.2-internal">
+   <children>
+      <Rectangle arcWidth="5.0" fill="#343434" height="913.0" layoutY="-1.0" smooth="false" stroke="BLACK"
+                 strokeWidth="0.0" width="127.0"/>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#2871fa" height="914.0" layoutX="109.0" layoutY="-2.0"
+                 stroke="#ddd9d9" strokeWidth="0.0" width="312.0"/>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#e6e6e6" height="913.0" layoutX="390.0" layoutY="-2.0"
+                 stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="977.0"/>
+      <Button cancelButton="true" defaultButton="true" layoutX="1165.0" layoutY="759.0" mnemonicParsing="false"
+              prefHeight="35.0" prefWidth="167.0" style="-fx-background-color: #2871fa;" text="Ajouter"
+              textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Roboto Condensed" size="17.0"/>
+         </font>
+      </Button>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="44.0" layoutY="322.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/001-user.png"/>
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="44.0" layoutY="388.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/002-notification.png"/>
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="34.0" layoutX="44.0" layoutY="456.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/003-gear.png"/>
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="37.0" layoutY="857.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/004-logout.png"/>
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="1257.0" layoutY="870.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/eduspace.png"/>
+         </image>
+      </ImageView>
+      <Text layoutX="429.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de salles"
+            wrappingWidth="274.6875">
+         <font>
+            <Font name="Roboto Condensed" size="30.0"/>
+         </font>
+      </Text>
+      <ToggleButton layoutX="109.0" layoutY="102.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="281.0"
+                    selected="true" style="-fx-background-color: #2871fa;" text="SuperAdmin" textAlignment="CENTER"
+                    textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </ToggleButton>
+      <ToggleButton layoutX="109.0" layoutY="151.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="281.0"
+                    style="-fx-background-color: #2871fa;" text="Gestion de RH" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Roboto Condensed" size="18.0"/>
+         </font>
+      </ToggleButton>
+      <ToggleButton layoutX="109.0" layoutY="202.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="281.0"
+                    style="-fx-background-color: #2871fa;" text="Gestion de postes" textAlignment="CENTER"
+                    textFill="WHITE">
+         <font>
+            <Font name="Roboto Condensed" size="18.0"/>
+         </font>
+      </ToggleButton>
+      <ToggleButton layoutX="109.0" layoutY="253.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="281.0"
+                    style="-fx-background-color: #2871fa;" text="Gestion de salles" textAlignment="CENTER"
+                    textFill="WHITE">
+         <font>
+            <Font name="Roboto Condensed" size="18.0"/>
+
+         </font>
+      </ToggleButton>
+      <TableView fx:id="table" layoutX="429.0" layoutY="159.0" prefHeight="512.0" prefWidth="888.0"
+                 style="-fx-background-color: #e6e6e6; -fx-border-width: 1.3; -fx-border-color: #343434;"
+                 stylesheets="@GestSalle.css">
+         <columns>
+            <TableColumn fx:id="surnom" editable="false" prefWidth="75.0" sortable="false" text="Surnom"/>
+            <TableColumn fx:id="capacite" editable="false" prefWidth="75.0" sortable="false" text="Capacite"/>
+            <TableColumn fx:id="departement" editable="false" prefWidth="75.0" sortable="false" text="Departement"/>
+            <TableColumn fx:id="action" editable="false" prefWidth="75.0" sortable="false" text="Action"/>
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <styleClass>
+      <String fx:value="table-view"/>
+      <String fx:value="column-header-background"/>
+      <String fx:value="column-header"/>
+      <String fx:value="filler"/>
+      <String fx:value="label"/>
+   </styleClass>
+</AnchorPane>
